@@ -17,7 +17,7 @@ from computable.contracts import Reserve
 from computable.contracts import Datatrust
 from computable.contracts import Listing
 
-PROVIDER_URI = 'http://skynet.computeablelabs.com:8545'
+PROVIDER_URI = 'http://skynet.computablelabs.com:8545'
 GAS_PRICE = 3
 PUBLIC_KEY = os.environ.get('public_key')
 PRIVATE_KEY = os.environ.get('private_key')
@@ -257,6 +257,7 @@ if __name__ == '__main__':
     print(colored('instantiating MarketToken', 'blue'))
     market_token = MarketToken(PUBLIC_KEY)
     market_token.at(w3, market_token_address)
+    print(colored('Setting addresses...', 'blue'))
     mt_gas = market_token.deployed.functions.setPrivileged(reserve_address, listing_address).estimateGas()
     mt_args = market_token.set_privileged(reserve_address, listing_address, {'gas': mt_gas, 'gas_price': w3.toWei(GAS_PRICE, 'gwei')})
     mt_tx_hash = send(w3, PRIVATE_KEY, mt_args)
@@ -267,6 +268,7 @@ if __name__ == '__main__':
     print(colored('instantiating Voting', 'blue'))
     voting = Voting(PUBLIC_KEY)
     voting.at(w3, voting_address)
+    print(colored('Setting addresses...', 'blue'))
     v_gas = voting.deployed.functions.setPrivileged(parameterizer_address, datatrust_address, listing_address).estimateGas()
     v_args = voting.set_privileged(parameterizer_address, datatrust_address, listing_address, {'gas': v_gas, 'gas_price': w3.toWei(GAS_PRICE, 'gwei')})
     v_tx_hash = send(w3, PRIVATE_KEY, v_args)
@@ -277,6 +279,7 @@ if __name__ == '__main__':
     print(colored('instantiating Datatrust', 'blue'))
     datatrust = Datatrust(PUBLIC_KEY)
     datatrust.at(w3, datatrust_address)
+    print(colored('Setting addresses...', 'blue'))
     d_gas = datatrust.deployed.functions.setPrivileged(listing_address).estimateGas()
     d_args = datatrust.set_privileged(listing_address, {'gas': d_gas, 'gas_price': w3.toWei(GAS_PRICE, 'gwei')})
     d_tx_hash = send(w3, PRIVATE_KEY, d_args)
