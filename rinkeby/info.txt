@@ -1,0 +1,20 @@
+************* Deploying Ether Token *************
+0xfb736Dee24511bAE3B44F08cBDc17CcfCe6e9a7B
+
+************* Deploying Market Token *************
+0x7165E6C7112559c2658b299909130C687cAF4527
+
+************* Deploying Voting *************
+0x0632D7b3ea7e566fe32E152f9F2C3B27149276C6
+
+************* Deploying Parameterizer *************
+0xD3169Ad87C9FEdBBE15476653F1Fd5171c9178D0
+
+************* Deploying Reserve *************
+0x2a35cD0E9AA5A1aE2F92858F34529DE89B6310Bf
+
+************* Deploying Datatrust *************
+0x2Db810542b01Cbcfc778cf3556E1Dc2bbDc2Bb89
+
+************* Deploying Listing *************
+0xC2BC29c0962351Ad465409Bdf311E25256BAdd8f
