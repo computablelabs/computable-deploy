@@ -111,7 +111,7 @@ def get_parameterizer_opts():
         'plurality': 50,
         'backend_payment': 5,
         'maker_payment': 70,
-        'cost_per_byte': Web3.toWei(600, 'szabo') # 6e14 -> about 11 cents atm
+        'cost_per_byte': Web3.toWei(550, 'mwei') # 5.5e8 -> about 11/mbyte cents atm
         }
 
 def deploy_parameterizer(w3, market_token_address, voting_address):
