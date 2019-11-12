@@ -6,7 +6,7 @@ import json
 import web3
 from web3 import Web3
 from termcolor import colored
-from computable.helpers.transaction import call, send
+from computable.helpers.transaction import send
 from computable.contracts import Parameterizer
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
@@ -39,7 +39,7 @@ def get_parameterizer_opts():
         'spread': 110,
         'list_reward': Web3.toWei(2, 'ether'), # 2e18
         'stake': Web3.toWei(10, 'ether'), # 1e19
-        'vote_by': 86400, # seconds in 24 hours
+        'vote_by': 3600, # an hour TODO change to seconds in 24 hours -> 86400 when ready
         'plurality': 50,
         'backend_payment': 5,
         'maker_payment': 70,

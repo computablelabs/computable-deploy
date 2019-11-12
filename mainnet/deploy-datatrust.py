@@ -6,7 +6,7 @@ import json
 import web3
 from web3 import Web3
 from termcolor import colored
-from computable.helpers.transaction import call, send
+from computable.helpers.transaction import send
 from computable.contracts import Datatrust
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
@@ -92,6 +92,11 @@ if __name__ == '__main__':
         sys.exit(1)
     print('Reserve Address available. Continuing...')
 
+    print(colored(heading('Gas Price check'), 'yellow'))
+    if not GAS_PRICE:
+        sys.exit(1)
+    print('Gas Price available. Continuing...')
+
     print(colored(heading('Deploying Datatrust'), 'yellow'))
-    datatrust_address = deploy_datatrust(w3, ether_token_address, voting_address, parameterizer_address, reserve_address)
+    datatrust_address = deploy_datatrust(w3)
     print(colored(datatrust_address, 'green'))

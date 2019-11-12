@@ -6,7 +6,7 @@ import json
 import web3
 from web3 import Web3
 from termcolor import colored
-from computable.helpers.transaction import call, send
+from computable.helpers.transaction import send
 from computable.contracts import Listing
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
@@ -97,6 +97,11 @@ if __name__ == '__main__':
     if not DATATRUST_ADDRESS:
         sys.exit(1)
     print('Datatrust Address available. Continuing...')
+
+    print(colored(heading('Gas Price check'), 'yellow'))
+    if not GAS_PRICE:
+        sys.exit(1)
+    print('Gas Price available. Continuing...')
 
     print(colored(heading('Deploying Listing'), 'yellow'))
     listing_address = deploy_listing(w3)
