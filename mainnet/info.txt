@@ -1,0 +1,13 @@
+************* Deploying Ether Token *************
+
+************* Deploying Market Token *************
+
+************* Deploying Voting *************
+
+************* Deploying Parameterizer *************
+
+************* Deploying Reserve *************
+
+************* Deploying Datatrust *************
+
+************* Deploying Listing *************
