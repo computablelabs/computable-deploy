@@ -1,4 +1,4 @@
-#!/home/rob/py_36/bin/python3.6
+#!~/compas_env/bin/python3.6
 
 import sys
 import os
@@ -9,11 +9,11 @@ from computable.helpers.transaction import call, send
 from computable.contracts import Datatrust
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
-GAS_PRICE = None
+GAS_PRICE = 10
 PUBLIC_KEY = os.environ.get('public_key')
 PRIVATE_KEY = os.environ.get('private_key')
-DATATRUST_ADDRESS = None
-LISTING_ADDRESS = None
+DATATRUST_ADDRESS = '0xEd80E4627cEe54b72F406d61A43637E5dFB2e45c'
+LISTING_ADDRESS = '0x4587AaC1285cDa2ea573de911992d44A1c4C3A54'
 
 def heading(val):
     return f'************* {val} *************'

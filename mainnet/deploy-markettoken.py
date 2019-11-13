@@ -1,4 +1,4 @@
-#!/home/rob/py_36/bin/python3.6
+#!~/compas_env/bin/python3.6
 
 import sys
 import os
@@ -10,7 +10,7 @@ from computable.helpers.transaction import send
 from computable.contracts import MarketToken
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
-GAS_PRICE = None
+GAS_PRICE = 10
 PUBLIC_KEY = os.environ.get('public_key')
 PRIVATE_KEY = os.environ.get('private_key')
 

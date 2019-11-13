@@ -1,4 +1,4 @@
-#!/home/rob/py_36/bin/python3.6
+#!~/compas_env/bin/python3.6
 
 import sys
 import os
@@ -10,14 +10,14 @@ from computable.helpers.transaction import send
 from computable.contracts import Listing
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
-GAS_PRICE = None
+GAS_PRICE = 10
 PUBLIC_KEY = os.environ.get('public_key')
 PRIVATE_KEY = os.environ.get('private_key')
-MARKET_TOKEN_ADDRESS = None
-VOTING_ADDRESS = None
-PARAMETERIZER_ADDRESS = None
-RESERVE_ADDRESS = None
-DATATRUST_ADDRESS = None
+MARKET_TOKEN_ADDRESS = '0x4BbD0678d0ff2e289506152F4B53090E2f9Dc4D0'
+VOTING_ADDRESS = '0xf3a70Bd65b72065C89625Eb7d9D57cd6487F1982'
+PARAMETERIZER_ADDRESS = '0x0EA44154C2FaE1621FbB31CEc4119Cc523B3702a'
+RESERVE_ADDRESS = '0x2c5358c9573ad83cEb510982a438edcd5b0e0a81'
+DATATRUST_ADDRESS = '0xEd80E4627cEe54b72F406d61A43637E5dFB2e45c'
 
 def heading(val):
     return f'************* {val} *************'

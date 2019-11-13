@@ -1,4 +1,4 @@
-#!/home/rob/py_36/bin/python3.6
+#!~/compas_env/bin/python3.6
 
 import sys
 import os
@@ -10,11 +10,11 @@ from computable.helpers.transaction import send
 from computable.contracts import Voting
 
 PROVIDER_URI = 'http://mainnet.computablelabs.com:8545'
-GAS_PRICE = None
+GAS_PRICE = 10
 PUBLIC_KEY = os.environ.get('public_key')
 PRIVATE_KEY = os.environ.get('private_key')
 # TODO could be fetched from the info file via filereader
-MARKET_TOKEN_ADDRESS = None
+MARKET_TOKEN_ADDRESS = '0x4BbD0678d0ff2e289506152F4B53090E2f9Dc4D0'
 
 def heading(val):
     return f'************* {val} *************'
